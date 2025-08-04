@@ -1,13 +1,7 @@
 
-  
-
 # 🚀 Terraform AWS VPC & EKS Infrastructure Setup
 
-  
-
-This project automates the provisioning of a complete AWS infrastructure using [Terraform](https://www.terraform.io/). It includes:
-
-  
+This project automates the provisioning of a complete AWS infrastructure using [Terraform](https://www.terraform.io/). It includes:  
 
 - 🔧 VPC with public/private subnets across multiple AZs
 
@@ -19,11 +13,7 @@ This project automates the provisioning of a complete AWS infrastructure using [
 
 - 🧩 Modular structure for reuse and scalability
 
-  
-
 ---
-
-  
 
 ## 📁 Repository Structure
 
@@ -67,24 +57,14 @@ terraform-stuff-repo/
 
 └── README.md
 
-  
-  
 
----
-
-  
+---  
 
 ## Terraform Backend Setup for EKS State Management
 
-  
-
 This Terraform configuration creates the necessary AWS resources to securely store and lock the Terraform state for your EKS infrastructure setup.
 
-  
-
 ### Overview
-
-  
 
 - **S3 Bucket:** `apinfra-terraform-eks-state-bucket` — Stores the Terraform state files.
 
@@ -109,11 +89,7 @@ This Terraform configuration creates the necessary AWS resources to securely sto
 
 ### Steps
 
-  
-
 1. **Clone the repository**
-
-  
 
 ```bash
 
@@ -123,27 +99,32 @@ cd terraform-stuff-repo
 
 ```
 
-  
-
 2. **Initialize Terraform**
 
-  
-
 Initialize the working directory, download required providers, and configure the backend:
-
-  
 
 ```bash
 
 terraform init
 
 ```
+3. **Validate Terraform configuration**
 
-  
+Check for syntax errors and validate configuration correctness:
 
-3. **Apply the backend infrastructure**
+```bash
+terraform validate
+```
 
-  
+4. **Generate and review the execution plan**
+
+See the actions Terraform will perform without making any changes:
+
+```bash
+terraform plan
+```
+
+5. **Apply the backend infrastructure**
 
 This will create the S3 bucket and DynamoDB table for Terraform state management:
 
@@ -155,14 +136,8 @@ terraform apply
 
 ```
 
-  
-
 **Note:** Review the plan output carefully and confirm to provision the resources.
 
-  
-
 ---
-
-  
 
 Feel free to expand this README with module-specific instructions or environment setup details!
