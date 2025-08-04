@@ -35,11 +35,12 @@ terraform-stuff-repo/
 └── README.md
 
 
+
 ---
 
 ## Terraform Backend Setup for EKS State Management
 
-This Terraform configuration creates the necessary AWS resources to store and lock the Terraform state securely for your EKS infrastructure setup.
+This Terraform configuration creates the necessary AWS resources to securely store and lock the Terraform state for your EKS infrastructure setup.
 
 ### Overview
 
@@ -53,33 +54,43 @@ This Terraform configuration creates the necessary AWS resources to store and lo
 | AWS S3 Bucket      | `apinfra-terraform-eks-state-bucket`     | Remote storage of Terraform state files. |
 | AWS DynamoDB Table | `apinfra-terraform-eks-state-lock-table` | Locking mechanism to avoid concurrent runs.|
 
-### Usage Instructions
+---
 
-#### Prerequisites
+## Usage Instructions
 
-- AWS CLI configured with appropriate credentials and permissions.
-- Terraform installed (version compatible with AWS provider v5.x).
+### Prerequisites
+
+- AWS CLI configured with appropriate credentials and permissions.  
+- Terraform installed (version compatible with AWS provider v5.x).  
 - Permissions to create S3 buckets and DynamoDB tables.
 
-#### Steps
+### Steps
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-org/terraform-stuff-repo.git
-   cd terraform-stuff-repo
+1. **Clone the repository**
 
-## How to Initialize and Apply Terraform Backend
+    ```bash
+    git clone [https://github.com/your-org/terraform-stuff-repo.git](https://github.com/Iam-anirudhdeshmukh/terraform-stuff-repo.git)
+    cd terraform-stuff-repo
+    ```
 
-### Step 1: Initialize Terraform
+2. **Initialize Terraform**
 
-This command initializes the Terraform working directory, downloads the necessary provider plugins, and configures the backend.
+    Initialize the working directory, download required providers, and configure the backend:
 
-terraform init
+    ```bash
+    terraform init
+    ```
 
-## Step 2: Apply the Backend Infrastructure
-This command applies the Terraform configuration to create the backend resources such as the S3 bucket and DynamoDB table for state management.
+3. **Apply the backend infrastructure**
 
+    This will create the S3 bucket and DynamoDB table for Terraform state management:
 
-terraform apply
+    ```bash
+    terraform apply
+    ```
 
-Note: Review the plan output and confirm the apply to provision resources.
+    **Note:** Review the plan output carefully and confirm to provision the resources.
+
+---
+
+Feel free to expand this README with module-specific instructions or environment setup details!
