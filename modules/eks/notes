@@ -1,0 +1,22 @@
+📝 EKS Setup – Short Notes
+Create VPC with public/private subnets
+
+Enable OIDC provider for the cluster
+
+Create IAM roles for cluster, nodes, and service accounts
+
+Create EKS cluster with VPC and IAM role
+
+Create node groups (EC2 or Fargate)
+
+Update kubeconfig using aws eks update-kubeconfig
+
+Verify access with kubectl get nodes
+
+Deploy workloads (YAML, Helm, etc.)
+
+Use IRSA for pod-level AWS access
+
+Enable monitoring/logging
+
+Apply security best practices (RBAC, network policies)
