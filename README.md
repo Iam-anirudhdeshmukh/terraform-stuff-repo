@@ -94,34 +94,15 @@ This Terraform configuration creates the necessary AWS resources to securely sto
 
 ### Resources Created
 
-  
-
-| Resource Type | Name | Purpose |
-
-|--------------------|-------------------------------------------|------------------------------------------|
-
-| AWS S3 Bucket | `apinfra-terraform-eks-state-bucket` | Remote storage of Terraform state files. |
-
+| Resource Type      | Name                                      | Purpose                                    |
+|--------------------|-------------------------------------------|--------------------------------------------|
+| AWS S3 Bucket      | `apinfra-terraform-eks-state-bucket`     | Remote storage of Terraform state files.   |
 | AWS DynamoDB Table | `apinfra-terraform-eks-state-lock-table` | Locking mechanism to avoid concurrent runs.|
-
-  
-
----
-
-  
-
-## Usage Instructions
-
-  
 
 ### Prerequisites
 
-  
-
 - AWS CLI configured with appropriate credentials and permissions.
-
-- Terraform installed (version compatible with AWS provider v5.x).
-
+- Terraform installed (compatible with AWS provider v5.x).
 - Permissions to create S3 buckets and DynamoDB tables.
 
   
